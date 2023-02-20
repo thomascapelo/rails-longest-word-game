@@ -1,0 +1,7 @@
+<h1>New game</h1>
+<%= @random %>
+<form action="/score" method='POST' data-turbo="false">
+  <input type="text" name="try">
+  <input type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
